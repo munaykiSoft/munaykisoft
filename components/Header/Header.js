@@ -20,7 +20,7 @@ export const Header = () => {
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
-                                <NavLink href="/home" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                                <NavLink href="/" exact className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
                                     Inicio
                                 </NavLink>
                                 <NavLink href="/about" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
