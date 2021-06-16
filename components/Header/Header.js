@@ -1,28 +1,12 @@
 import React, { useState } from 'react'
 import { Transition } from '@headlessui/react';
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import {NavLink} from './NavLink';
 
-const Header = () => {
-
+export const Header = () => {
+    
     const [isOpen, setIsOpen] = useState(false);
-    const router = useRouter();
-
+    
     return (
-        // <div>
-        //     <Link href="/home">
-        //         <a>Inicio</a>
-        //     </Link>
-        //     <Link href="/about">
-        //         <a>Nosotros</a>
-        //     </Link>
-        //     <Link href="/service">
-        //         <a>Servicio</a>
-        //     </Link>
-        //     <Link href="/contact">
-        //         <a>Contactanos</a>
-        //     </Link>
-        // </div>
         <nav className="bg-gray-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
@@ -36,37 +20,18 @@ const Header = () => {
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
-                                <Link href="/home">
-                                    <a
-                                        className={ router.pathname == "/home" ? "hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium": "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" }
-                                    >
-                                        Inicio
-                                    </a>
-                                </Link>
-                                
-                                <Link href="/about">
-                                    <a
-                                        className={ router.pathname == "/about" ? "hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium": "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" }
-                                    >
-                                        Nosotros
-                                    </a> 
-                                </Link>
-
-                                <Link href="/service">
-                                    <a
-                                        className={ router.pathname == "/service" ? "hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium": "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" }
-                                    >
-                                        Servicios
-                                    </a>
-                                </Link>
-
-                                <Link href="/contact">
-                                    <a
-                                        className={ router.pathname == "/contact" ? "hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium": "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" }
-                                    >
-                                        Contactanos
-                                    </a>
-                                </Link>
+                                <NavLink href="/home" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                                    Inicio
+                                </NavLink>
+                                <NavLink href="/about" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                                    Nosotros
+                                </NavLink>
+                                <NavLink href="/service" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                                    Servicios
+                                </NavLink>
+                                <NavLink href="/contact" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                                    Contactanos
+                                </NavLink>
                             </div>
                         </div>
                     </div>
@@ -168,8 +133,6 @@ const Header = () => {
                 )}
             </Transition>
         </nav>
-
     )
 }
 
-export default Header
