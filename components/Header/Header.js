@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { Transition } from '@headlessui/react';
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Header = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const router = useRouter();
 
     return (
         // <div>
@@ -36,7 +38,7 @@ const Header = () => {
                             <div className="ml-10 flex items-baseline space-x-4">
                                 <Link href="/home">
                                     <a
-                                        className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                                        className={ router.pathname == "/home" ? "hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium": "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" }
                                     >
                                         Inicio
                                     </a>
@@ -44,7 +46,7 @@ const Header = () => {
                                 
                                 <Link href="/about">
                                     <a
-                                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                        className={ router.pathname == "/about" ? "hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium": "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" }
                                     >
                                         Nosotros
                                     </a> 
@@ -52,7 +54,7 @@ const Header = () => {
 
                                 <Link href="/service">
                                     <a
-                                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                        className={ router.pathname == "/service" ? "hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium": "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" }
                                     >
                                         Servicios
                                     </a>
@@ -60,7 +62,7 @@ const Header = () => {
 
                                 <Link href="/contact">
                                     <a
-                                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                        className={ router.pathname == "/contact" ? "hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium": "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" }
                                     >
                                         Contactanos
                                     </a>
