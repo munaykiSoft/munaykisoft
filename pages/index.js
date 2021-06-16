@@ -54,6 +54,26 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      <div>
+        <div className="bg-primaryOrange-500 w-24">
+          Orange
+        </div>
+        <div className="bg-secondaryYellow-500 w-24">
+          yellow
+        </div>
+        <div className= "bg-secondaryLether-500 w-24 ">
+          Letras
+        </div>
+        <div className="bg-secondaryNavbarFont-500 w-24">
+          Navbar
+        </div>
+        <div className="bg-secondaryNavbarFont2-500 w-24">
+          Navbar2
+        </div>
+      </div>
+
+
     </div>
   )
 }
