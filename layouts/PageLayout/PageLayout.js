@@ -2,8 +2,7 @@ import React from 'react';
 import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 
-
-const PageLayout = ({ children }) => {
+export const PageLayout = ({ children }) => {
     return (
         <>
             <Header />
@@ -14,5 +13,3 @@ const PageLayout = ({ children }) => {
         </>
     )
 }
-
-export default PageLayout
