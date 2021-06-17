@@ -30,9 +30,8 @@ export const Footer = () => {
                     <TextareaGroup label="¿Cuéntanos cuál es tu necesidad? *" color="text-white" bold/>
                 </FormGroup>
                 <FormGroup>
-                    <Button label="Envia tu mensaje" type="Envie su mensaje"/>
+                    <Button text="Enviar mensaje" type="primary"/>
                 </FormGroup>
-    
             </div>
 
         </footer>
