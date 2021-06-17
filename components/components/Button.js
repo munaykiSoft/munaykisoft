@@ -2,8 +2,9 @@ import React, { cloneElement } from 'react'
 
 export const Button = ({
     className = '',
-    text = 'button',
+    text = 'Envia tu mensaje',
     size = 'base',
+    label = '',
     link,
     type = 'primary',
     icon = null,
