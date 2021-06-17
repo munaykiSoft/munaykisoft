@@ -1,5 +1,6 @@
 import React, { cloneElement } from 'react'
 
+// https://www.gustui.com/docs/application/components/buttons
 export const Button = ({
     className = '',
     text = 'Envia tu mensaje',
