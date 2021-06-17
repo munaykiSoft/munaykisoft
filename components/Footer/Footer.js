@@ -1,4 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { FormGroup } from '../components/FormGroup';
+import { InputGroup } from '../components/InputGroup';
+import { TextareaGroup } from '../components/TextareaGroup';
+
 
 export const Footer = () => {
     return (
@@ -8,31 +12,23 @@ export const Footer = () => {
                 <p className="text-terciary text-center">Los campos marcados <span className="text-red-600"> * </span> son <span className="text-primary"> obligatorios </span></p>
             </div>
 
-            <div className="row m-4 py-4 bg-quarter-300">
-                <div >
-                    <div className="col flex-wrap mx-4 py-2">
-                        <label className="text-terciary"> Como te llamas? <span className="text-red-600">*</span></label>
-                        <input></input>
-                    </div>
-                    <div className="col flex-wrap mx-4 py-2">
-                        <label className="text-terciary"> En que ciudad vives? <span className="text-red-600">*</span></label>
-                        <input></input>
-                    </div>
-                </div>
 
-                <div>
-                    <div className="col flex-wrap mx-4 py-2">
-                        <label className="text-terciary"> Cual es tu correo electronico? <span className="text-red-600">*</span></label>
-                        <input ></input>
-                    </div>
-                    <div className="col flex-wrap mx-4 py-2">
-                        <label className="text-terciary"> Cuentanos cual es tu necesidad? <span className="text-red-600">*</span></label>
-                        <input></input>
-                    </div>
-                </div>
+            <div className="row m-4 p-4 bg-quarter-300">
+                <FormGroup horizontal>
+                    <InputGroup label="¿Cómo te llamas?" type="text" color="text-white" bold/>
+                    <InputGroup label="¿En qué ciudad vives?" type="text" color="text-white" bold/>
+                </FormGroup>
+                <FormGroup horizontal>
+                    <InputGroup label="¿Cuál es tu correo electrónico?" type="text" color="text-white" bold/>
+                    <InputGroup label="¿A qué número te podemos llamar?" type="text" color="text-white" bold/>
+                </FormGroup>
+                <FormGroup>
+                    <TextareaGroup label="Cuéntanos cuál es tu necesidad" color="text-white" bold/>
+                </FormGroup>
+    
             </div>
 
-        </footer>        
+        </footer>
     )
 }
 
