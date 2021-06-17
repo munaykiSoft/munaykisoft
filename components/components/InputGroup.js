@@ -17,7 +17,7 @@ export const InputGroup = ({
     ...newProps
 }) => {
     const hasError = error || errorText;
-    const finalClass = `${className} w-full border border-gray-300 rounded-sm px-4 py-3 outline-none transition-colors duration-150 ease-in-out focus:border-blue-400 ${hasError && `border-red-600`
+    const finalClass = `${className} w-full border border-gray-300 focus:ring-2 focus:ring-secondary rounded-sm px-4 py-3 outline-none transition-colors duration-150 ease-in-out ${hasError && `border-red-600`
         }`
     return (
         <div className={horizontal ? "sm:flex sm:items-center" : ""}>
