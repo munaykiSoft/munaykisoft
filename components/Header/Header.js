@@ -2,7 +2,7 @@ import React, { createRef, useState } from 'react'
 import { Transition } from '@headlessui/react';
 import Image from 'next/image';
 import { NavLink } from './NavLink';
-
+import cuy from '../../assets/images/colores.png';
 
 
 export const Header = () => {
@@ -18,14 +18,20 @@ export const Header = () => {
                         <div className="flex-shrink-0">
                             {/* <img
                                 className="h-8 w-8"
-                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                                alt="Workflow"
+                                src="/assets/images/ico01.png"
+                                alt="Cuy"
+                            /> */}
+                            {/* <Image
+                                src="/assets/images/ico01.png"
+                                width={45}
+                                height={45}
+                                alt="Cuy"
                             /> */}
                             <Image
-                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                                width={32}
-                                height={32}
-                                alt="Picture of the author"
+                                src={cuy}
+                                width={45}
+                                height={45}
+                                alt="Cuy"
                             />
                         </div>
                         <div className="hidden md:block">

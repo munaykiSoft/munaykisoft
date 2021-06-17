@@ -31,6 +31,8 @@ export const Footer = () => {
                 </FormGroup>
                 <FormGroup>
                     <Button text="Enviar mensaje" type="primary"/>
+                    <Button text="eror mensaje" type="danger"/>
+                    <Button text="Enviar mensaje" type="secondary"/>
                 </FormGroup>
             </div>
 
