@@ -3,9 +3,8 @@ import React, { cloneElement } from 'react'
 // https://www.gustui.com/docs/application/components/buttons
 export const Button = ({
     className = '',
-    text = 'Envia tu mensaje',
+    text = 'Enviar',
     size = 'base',
-    label = '',
     link,
     type = 'primary',
     icon = null,
@@ -26,7 +25,7 @@ export const Button = ({
             ' text-white bg-blue-400 border-blue-400 hover:bg-blue-600 hover:border-blue-600'
     else if (type === 'primary')
         finalClass +=
-            ' text-white bg-green-400 border-green-400 hover:bg-green-600 hover:border-green-600'
+            ` text-white bg-primary border-primary-600 hover:bg-primary-600 hover:bg-primary-600`
     else if (type === 'secondary')
         finalClass +=
             ' text-blue-400 bg-transparent border-blue-400 hover:bg-blue-400 hover:text-white'
