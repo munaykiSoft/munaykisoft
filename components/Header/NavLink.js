@@ -6,6 +6,7 @@ import { Link } from './Link';
 
 
 export const NavLink = ({children, href, exact, ...props}) => {
+
     const { pathname } = useRouter();
     const isActive = exact ? pathname === href : pathname.startsWith(href);
     

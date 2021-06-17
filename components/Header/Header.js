@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { Transition } from '@headlessui/react';
+import Image from 'next/image';
 import {NavLink} from './NavLink';
+
+
 
 export const Header = () => {
     
@@ -12,10 +15,16 @@ export const Header = () => {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
                         <div className="flex-shrink-0">
-                            <img
+                            {/* <img
                                 className="h-8 w-8"
                                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                                 alt="Workflow"
+                            /> */}
+                            <Image 
+                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" 
+                                width={32}
+                                height={32}
+                                alt="Picture of the author" 
                             />
                         </div>
                         <div className="hidden md:block">
