@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
-import { getClientsApi } from "../api/clients"
-import { getServicesApi } from "../api/services"
+import { useEffect, useState } from 'react'
+import { getClientsApi } from '../api/clients'
+import { getServicesApi } from '../api/services'
+import Image from 'next/image'
 
 export default function Home() {
 
@@ -43,7 +44,8 @@ export default function Home() {
       {
         clients.map((client) => 
           <div key={ client.id }>
-            <img src={ client.imagen.url} alt={client.imagen.name}/>
+            {/* <img src={ client.imagen.url} alt={client.imagen.name}/> */}
+            <Image width="100" height="50" src={ client.imagen.url } alt={client.imagen.name} />
           </div>
         )
       }
