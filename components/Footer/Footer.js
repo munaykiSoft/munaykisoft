@@ -12,15 +12,17 @@ export const Footer = () => {
     const formik = useFormik({
         initialValues: initialValues(),
         validationSchema: Yup.object(validationSchema()),
-        onSubmit: async (formData) => {
+        onSubmit: async (values, { resetForm }) => {
+            console.log(values);
             setLoading(true);
-            const response = await contactApi(formData);
+            const response = await contactApi(values);
+            resetForm({});
             setLoading(false);
-            console.log(response);
-        }
+        },
     });
 
     const { handleSubmit, handleChange, errors } = formik;
+    const { name, city, mobile, email, description } = formik.values;
 
     return (
         <footer className="bg-quarter-500 py-6">
@@ -35,7 +37,8 @@ export const Footer = () => {
                 <form onSubmit={handleSubmit}>
                     <FormGroup horizontal>
                         <InputGroup 
-                            name="name" 
+                            name="name"
+                            value = { name || '' } 
                             label="¿Cómo te llamas? *" 
                             type="text" 
                             color="text-white" 
@@ -46,6 +49,7 @@ export const Footer = () => {
                         />
                         <InputGroup 
                             name="city" 
+                            value = { city || '' } 
                             label="¿En qué ciudad vives? *" 
                             type="text" 
                             color="text-white" 
@@ -58,6 +62,7 @@ export const Footer = () => {
                     <FormGroup horizontal>
                         <InputGroup 
                             name="email" 
+                            value = { email || '' } 
                             label="¿Cuál es tu correo electrónico? *" 
                             type="text" 
                             color="text-white" 
@@ -67,6 +72,7 @@ export const Footer = () => {
                         />
                         <InputGroup 
                             name="mobile" 
+                            value = { mobile || '' } 
                             label="¿A qué número te podemos llamar? *" 
                             type="text" 
                             color="text-white" 
@@ -76,7 +82,8 @@ export const Footer = () => {
                     </FormGroup>
                     <FormGroup>
                         <TextareaGroup 
-                            name="description" 
+                            name="description"
+                            value = { description || '' }  
                             label="¿Cuéntanos cuál es tu necesidad? *" 
                             color="text-white" 
                             bold 
@@ -87,7 +94,8 @@ export const Footer = () => {
 
                         {
                             loading ? (
-                                <h1>Cargando</h1>
+                                // <h1>Enviando</h1>
+                                <Button text="Enviando" type="primary" disabled />
                             ):(
                                 <Button text="Enviar mensaje" type="primary" submit />
                             )

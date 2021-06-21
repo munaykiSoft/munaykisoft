@@ -4,13 +4,14 @@ export const InputGroup = ({
     className = '',
     label = '',
     name = '',
+    value = '',
     type = 'text',
     color = 'text-gray-600',
     bold = false,
     placeholder = '',
     error = false,
     errorText = '',
-    defaultValue = '',
+    // defaultValue = '',
     description = '',
     horizontal = false,
     // onChange = () => { },
@@ -36,7 +37,8 @@ export const InputGroup = ({
                     name={name}
                     className={finalClass}
                     placeholder={placeholder}
-                    defaultValue={defaultValue}
+                    // defaultValue={defaultValue}
+                    value = {value}
                     // onChange={e => onChange(e.currentTarget.value)}
                     {...newProps}
                 />

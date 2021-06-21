@@ -6,6 +6,7 @@ export const TextareaGroup = ({
     color = 'text-gray-600',
     bold = false,
     name = '',
+    value = '',
     placeholder = '',
     error = false,
     errorText = '',
@@ -35,7 +36,8 @@ export const TextareaGroup = ({
                 name={name}
                 className={finalClass}
                 placeholder={placeholder}
-                defaultValue={defaultValue}
+                value={value}
+                // defaultValue={defaultValue}
                 // onChange={e => onChange(e.currentTarget.value)}
                 {...newProps}
             ></textarea>
