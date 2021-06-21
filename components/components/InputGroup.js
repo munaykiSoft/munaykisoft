@@ -13,7 +13,7 @@ export const InputGroup = ({
     defaultValue = '',
     description = '',
     horizontal = false,
-    onChange = () => { },
+    // onChange = () => { },
     ...newProps
 }) => {
     const hasError = error || errorText;
@@ -37,7 +37,7 @@ export const InputGroup = ({
                     className={finalClass}
                     placeholder={placeholder}
                     defaultValue={defaultValue}
-                    onChange={e => onChange(e.currentTarget.value)}
+                    // onChange={e => onChange(e.currentTarget.value)}
                     {...newProps}
                 />
                 {description && (

@@ -12,7 +12,7 @@ export const TextareaGroup = ({
     defaultValue = '',
     description = '',
     resize = false,
-    onChange = () => { },
+    // onChange = () => { },
     ...newProps
 }) => {
 
@@ -36,7 +36,7 @@ export const TextareaGroup = ({
                 className={finalClass}
                 placeholder={placeholder}
                 defaultValue={defaultValue}
-                onChange={e => onChange(e.currentTarget.value)}
+                // onChange={e => onChange(e.currentTarget.value)}
                 {...newProps}
             ></textarea>
             {description && (
