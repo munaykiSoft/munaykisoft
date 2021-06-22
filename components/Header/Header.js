@@ -2,7 +2,7 @@ import React, { createRef, useState } from 'react'
 import { Transition } from '@headlessui/react';
 import Image from 'next/image';
 import { NavLink } from './NavLink';
-import cuy from '../../assets/images/colores.png';
+import cuy from '../../assets/images/cuy.png';
 
 
 export const Header = () => {
@@ -11,9 +11,9 @@ export const Header = () => {
     const ref = createRef();
 
     return (
-        <nav className="bg-quarter">
+        <nav className="bg-secondary">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16">
+                <div className="flex items-center justify-between h-16 ">
                     <div className="flex items-center">
                         <div className="flex-shrink-0">
                             {/* <img

@@ -28,7 +28,8 @@ export default function Home() {
   }, [])
   return (
     <>
-      <ul>
+      
+      {/* <ul>
         {
           services.map((service) => (
             <li key={service.id}>
@@ -36,19 +37,19 @@ export default function Home() {
             </li>
           ))
         }
-      </ul>
+      </ul> */}
       <br/>
       <br/>
       <br/>
-      {
+      {/* {
         clients.map((client) => 
-          <div key={ client.id }>
-            <img src={ client.imagen.url} alt={client.imagen.name}/>
-          </div>
+        <div key={ client.id }>
+        <img src={ client.imagen.url} alt={client.imagen.name}/>
+        </div>
         )
-      }
+      } */}
       <br/>
-      <br/>
+      
     </>
   )
 }
