@@ -5,7 +5,7 @@ const Service = () => {
            <section>
                 <div>
                     <h2 className="text-center">
-                        Nuestro Equipo
+                        Nuestros Servicios
                     </h2>
                     <div className="grid gap-4 my-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         <div className="bg-yellow-500">
