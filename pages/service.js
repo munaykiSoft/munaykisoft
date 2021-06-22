@@ -1,5 +1,7 @@
-import { useState } from 'react';
-import { getServicesApi } from '../api/services'
+import { useEffect, useState } from 'react';
+import { getServicesApi } from '../api/services';
+import Image from 'next/image';
+
 
 const Service = () => {
 
@@ -23,24 +25,15 @@ const Service = () => {
                         Nuestros Servicios
                     </h2>
                     <div className="grid gap-4 my-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                        <div className="bg-yellow-500">
-                            1
-                        </div>
-                        <div className="bg-red-500">
-                            2
-                        </div>
-                        <div className="bg-pink-500">
-                            3
-                        </div>
-                        <div className="bg-green-500">
-                            4
-                        </div>
-                        <div className="bg-primary-600">
-                            5
-                        </div>
-                        <div className="bg-secondary-500">
-                            6
-                        </div>
+                        {
+                            services.map((service)=> (
+                                <div key={ service.id } className="bg-yellow-500">
+                                    {service.nombre}
+                                    <Image width="auto" height="250" src={ service.imagen.url } alt={service.imagen.name} />
+                                </div>
+                            ))
+                        }
+                       
                     </div>
                 </div>
            </section>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getClientsApi } from '../api/clients'
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function Home() {
 
