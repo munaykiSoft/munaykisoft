@@ -1,22 +1,10 @@
 import { useEffect, useState } from 'react'
 import { getClientsApi } from '../api/clients'
-import { getServicesApi } from '../api/services'
 import Image from 'next/image'
 
 export default function Home() {
 
-  const [services, setServices] = useState([])
   const [clients, setClients] = useState([])
-
-  useEffect(() => {
-    (
-      async () => {
-        const response = await getServicesApi();
-        setServices(response || []);
-        console.log('goooooooooo', response);
-      }
-    )()
-  }, []);
 
   useEffect(() => {
     (
@@ -29,15 +17,6 @@ export default function Home() {
   }, [])
   return (
     <>
-      <ul>
-        {
-          services.map((service) => (
-            <li key={service.id}>
-              { service.nombre }
-            </li>
-          ))
-        }
-      </ul>
       <br/>
       <br/>
       <br/>
