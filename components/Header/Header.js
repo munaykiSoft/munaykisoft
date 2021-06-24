@@ -36,16 +36,16 @@ export const Header = () => {
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
-                                <NavLink href="/" exact className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                                <NavLink href="/" exact className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium">
                                     Inicio
                                 </NavLink>
-                                <NavLink href="/about" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                                <NavLink href="/about" className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium">
                                     Nosotros
                                 </NavLink>
-                                <NavLink href="/service" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                                <NavLink href="/service" className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium">
                                     Servicios
                                 </NavLink>
-                                <NavLink href="/contact" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                                <NavLink href="/contact" className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium">
                                     Contactanos
                                 </NavLink>
                             </div>

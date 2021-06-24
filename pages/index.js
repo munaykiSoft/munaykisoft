@@ -20,7 +20,7 @@ export default function Home() {
       <br/>
       <br/>
       <br/>
-      <h2 className="text-center">
+      <h2 className="text-center text-3xl">
         Nuestro Clientes
       </h2>
       <div className="grid gap-4 my-2 mx-5 text-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
