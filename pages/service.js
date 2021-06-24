@@ -29,8 +29,8 @@ const Service = () => {
                             services.map((service)=> (
                                 <div key={ service.id } className="text-center py-4 my-4">
                                     {service.nombre}
-                                    <div className="bg-red-600">
-                                      <Image width="auto" height="250" src={ service.imagen.url } alt={service.imagen.name}/>
+                                    <div className="border-2 border-secondary-500">
+                                      <Image width="250" height="200"  src={ service.imagen.url } alt={service.imagen.name}/>
                                     </div>
                                 </div>
                             ))
