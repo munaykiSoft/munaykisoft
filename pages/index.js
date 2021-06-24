@@ -20,14 +20,19 @@ export default function Home() {
       <br/>
       <br/>
       <br/>
+      <h2 className="text-center">
+        Nuestro Clientes
+      </h2>
+      <div className="grid gap-4 my-2 mx-5 text-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       {
         clients.map((client) => 
-          <div key={ client.id }>
+        <div key={ client.id } >
             {/* <img src={ client.imagen.url} alt={client.imagen.name}/> */}
             <Image width="100" height="50" src={ client.imagen.url } alt={client.imagen.name} />
-          </div>
+        </div>
         )
       }
+      </div>
       <br/>
       <br/>
     </>

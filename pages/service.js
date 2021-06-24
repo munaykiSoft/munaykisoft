@@ -21,15 +21,17 @@ const Service = () => {
         <>
            <section>
                 <div>
-                    <h2 className="text-center">
+                    <h2 className="text-center leading-10">
                         Nuestros Servicios
                     </h2>
                     <div className="grid gap-4 my-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         {
                             services.map((service)=> (
-                                <div key={ service.id } className="bg-yellow-500">
+                                <div key={ service.id } className="text-center py-4 my-4">
                                     {service.nombre}
-                                    <Image width="auto" height="250" src={ service.imagen.url } alt={service.imagen.name} />
+                                    <div className="bg-red-600">
+                                      <Image width="auto" height="250" src={ service.imagen.url } alt={service.imagen.name}/>
+                                    </div>
                                 </div>
                             ))
                         }
