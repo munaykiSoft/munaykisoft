@@ -1,9 +1,7 @@
 
 const contact = () => {
     return (
-        <>
-            pagina de contacto
-        </>
+        <div>ga</div>
     )
 }
 
