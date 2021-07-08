@@ -16,16 +16,16 @@ export default function Home() {
     )()
   }, [])
   return (
-    <>
+    
       <div>
-        <div className="border-2 border-secondary-900">
-          imagen
+        <div className="text-center h-auto w-auto" >
+          <Image src="/assets/images/hero.jpg" width={1440} height={600} />
         </div>
 
-        <h2 className="text-center text-3xl border-secondary-900 border-2">
+        <h2 className="text-center text-3xl">
           Nuestro Clientes
         </h2>
-        <div className="grid gap-4 my-2 mx-5 text-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 my-2 mx-5 text-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
         {
           clients.map((client) => 
           <div key={ client.id } >
@@ -36,6 +36,6 @@ export default function Home() {
         }
         </div>
       </div>
-    </>
+    
   )
 }
